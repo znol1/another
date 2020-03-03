@@ -1,6 +1,5 @@
 <div class = "el">
   <button (click)="sort(services.we, typeSort)">Сортировать</button>
-  <button (click)="sorts(services.we, Sort)">Сортировать по статусу</button>
 <app-buy *ngFor=
            "let buyElement of services.we;
             let i = index" [buy]="buyElement"

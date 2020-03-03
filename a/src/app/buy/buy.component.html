@@ -11,7 +11,7 @@
         <label>изменить товар</label>
         <input type="text" class="form-control" #editName formControlName = 'name'>
         <label>изменить количество</label>
-        <input type="text" class="form-control"  formControlName = 'number'>
+        <input type="number" class="form-control"  formControlName = 'number'>
         {{buy.status}}
         <input type = "checkbox" [(ngModel)]="t" [ngModelOptions]="{standalone: true}">
         <button type = "submit" class="btn btn-primary btn-lg" [disabled]="!editForm.valid">Изменить</button>

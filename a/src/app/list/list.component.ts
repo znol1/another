@@ -23,6 +23,9 @@ export class ListComponent implements OnInit {
     } catch (err) {
       console.log(err);
     }
+    this.services.we = this.services.we.sort((a, b) => {
+        if (a.status < b.status) { return -1; }
+      });
   }
   async edBd(workerData: { id: number, name: string, status: boolean, number: number }) {
     try {
@@ -48,16 +51,9 @@ export class ListComponent implements OnInit {
       console.log(err);
     }
   }
-  sort(s, typeSort) {
-    if (typeSort) {
+  sort(s, Sort) {
       this.services.we = s.sort((a, b) => {
         if (a.name < b.name) { return -1; }
-      });
-    }
-  }
-  sorts(s, Sort) {
-      this.services.we = s.sort((a, b) => {
-        if (a.status < b.status) { return -1; }
       });
   }
 }
